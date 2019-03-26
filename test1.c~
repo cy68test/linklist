@@ -1,0 +1,19 @@
+struct Node
+{
+  int data;
+  struct Node *next;
+};
+
+
+int main()
+{
+
+  struct Node* head = NULL;
+
+  head = (struct Node*)malloc(sizeof(struct node));
+  head->data = 1;
+  head->next = NULL;
+  return 0;
+}
+
+  
