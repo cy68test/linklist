@@ -29,7 +29,6 @@ void Push(struct node* head, int data)
 
 }
 
-
 int main()
 {
 
