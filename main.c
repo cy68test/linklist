@@ -26,7 +26,22 @@ int Length(struct node* head)
 
 void Push(struct node* head, int data)
 {
+  struct node* push;
+  push = (struct node*)malloc(sizeof(struct node));
+  push->data = head->data;
+  push->next = head->next;
+  head->data = data;
+  head->next = push;
+}
 
+void Print(struct node* head)
+{
+	struct node* current = head;
+	while(current != NULL)
+	{
+		printf("current node's data is %d\n", current->data);
+		current = current->next;
+	}
 }
 
 int main()
@@ -38,7 +53,9 @@ int main()
   head->data = 1;
   head->next = NULL;
 
+  Push(head, 2);
   printf("count %d\n", Length(head));
+	Print(head);
 
   return 0;
 }
